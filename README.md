@@ -43,11 +43,6 @@ Compile the library:
 make
 ```
 
-Compile bonus functions:
-
-```bash
-make bonus
-```
 
 Remove object files:
 
@@ -91,7 +86,6 @@ libft/
 ├── libft.h
 ├── ft_*.c
 ├── ft_*.o
-└── bonus linked list functions
 ```
 
 
