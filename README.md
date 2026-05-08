@@ -28,9 +28,6 @@ The project also introduces low-level programming concepts such as:
 The final result is a reusable static C library (`libft.a`) used in future 42 projects such as:
 - get_next_line
 - push_swap
-- pipex
-- minishell
-- cub3d
 
 
 # Instructions
