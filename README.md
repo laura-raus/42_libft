@@ -74,10 +74,10 @@ libft/
 │   ├── main_libc.c
 │   ├── main_additional.c
 │   ├── main_lists.c
+|   ├── test_utils.h
 │   └── valgrind.sh
 └── docs/
-    ├── en.subject.pdf
-    └── testing_notes.md
+    └── en.subject.pdf
 ```
 
 ### Source Organization
