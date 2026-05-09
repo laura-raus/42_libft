@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:51:31 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:51:32 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:16:15 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	char	str[] = "hello";

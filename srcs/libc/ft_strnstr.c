@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:51:49 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 16:50:59 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:15:45 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	char	str[] = "hello world";

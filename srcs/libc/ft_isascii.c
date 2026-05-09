@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:48:02 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 16:04:33 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:14:30 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_isascii(int c)
 
 /*
 #include <stdio.h>
+
 int	main(void)
 {
 	printf("%d\n", ft_isascii(0));

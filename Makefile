@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: laraus <laraus@student.42lisboa.com>       +#+  +:+       +#+         #
+#    By: laraus <laraus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/06 16:02:55 by laraus            #+#    #+#              #
-#    Updated: 2026/05/09 12:01:40 by laraus           ###   ########.fr        #
+#    Updated: 2026/05/09 17:46:40 by laraus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 INCLUDES = -Iincludes
 

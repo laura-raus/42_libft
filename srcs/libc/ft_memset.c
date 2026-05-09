@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:49:05 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:49:08 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:10:57 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	*ft_memset(void *b, int c, size_t len)
 #include <stdio.h>
 int	main(void)
 {
-	char	s[10] = "abcdefghi";
-
-	ft_memset(s, 'X', 3);
-	printf("%s\n", s);
-	ft_memset(s, 0, 10);
-	printf("%d\n", s[0]);
+	// 196354
+	int arr[1] = {0};
+	ft_memset(arr, 2, 1);
+	ft_memset(((unsigned char *)(arr) + 1), 255, 1);
+	ft_memset(((unsigned char *)(arr) + 2), 2, 1);
+	printf("%d\n", arr[0]);
 }
 */

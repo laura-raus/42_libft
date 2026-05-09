@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:51:14 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:51:15 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:15:40 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	char	*str;

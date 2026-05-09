@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:52:11 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:52:12 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:14:41 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,16 @@ void	*ft_calloc(size_t count, size_t size)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	int		*arr;
 	size_t	i;
 
-	arr = ft_calloc(5, sizeof(int));
+	arr = ft_calloc(4, 0);
 	if (!arr)
 		return (1);
 	i = 0;
-	while (i < 5)
+	while (i < 4)
 	{
 		printf("%d\n", arr[i]);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:54:17 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:56:16 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:11:13 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
+		ft_putchar_fd(*s++, fd);
 }
 /*
 int	main(void)

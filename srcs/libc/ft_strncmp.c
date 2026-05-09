@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:51:22 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:51:24 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:15:43 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	printf("%d\n", ft_strncmp("abc", "abc", 3));

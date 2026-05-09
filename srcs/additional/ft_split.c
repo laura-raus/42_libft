@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:53:34 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:55:37 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:12:18 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,9 @@ int	main(void)
 	print_split(arr);
 	free_split(arr);
 	arr = ft_split("", ' ');
+	print_split(arr);
+	free_split(arr);
+	arr = ft_split("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 'a');
 	print_split(arr);
 	free_split(arr);
 	return (0);

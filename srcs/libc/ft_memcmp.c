@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:51:37 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:51:38 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:16:12 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	printf("%d\n", ft_memcmp("abc", "abc", 3));

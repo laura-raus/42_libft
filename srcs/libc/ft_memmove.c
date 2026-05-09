@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: laraus <laraus@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:49:41 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/09 00:19:09 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:29:07 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	if (!dst && !src)
-		return (NULL);
+	if (dst == src)
+		return (dst);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
 	if (d > s)
@@ -33,8 +33,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(d, s, len);
 	return (dst);
 }
-
 /*
+#include <string.h>
 #include <stdio.h>
 int	main(void)
 {
@@ -45,5 +45,6 @@ int	main(void)
 	printf("%s\n", s1);
 	ft_memmove(s2, s2 + 2, 4);
 	printf("%s\n", s2);
+	ft_memmove(NULL, NULL, 1);
 }
 */

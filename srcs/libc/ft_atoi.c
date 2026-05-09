@@ -6,7 +6,7 @@
 /*   By: laraus <laraus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:52:05 by laraus            #+#    #+#             */
-/*   Updated: 2026/05/06 15:52:06 by laraus           ###   ########.fr       */
+/*   Updated: 2026/05/09 18:14:46 by laraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		result = (result * 10) + (*str - '0');
 		str++;
@@ -37,7 +37,6 @@ int	ft_atoi(const char *str)
 
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	printf("%d\n", ft_atoi("42"));
