@@ -18,8 +18,6 @@ The library is compiled as a static archive:
 libft.a
 ```
 
-
-
 ## Overview
 
 The project focuses on:
@@ -40,8 +38,6 @@ introducing additional repository organization for:
 * testing
 * long-term portfolio usage
 
-
-
 ## Internal Flow
 
 ```txt
@@ -53,8 +49,6 @@ utility functions
     ↓
 memory / strings / lists
 ```
-
-
 
 ## Repository Structure
 
@@ -90,8 +84,6 @@ The repository separates functions into:
 This structure improves readability and long-term maintainability while
 remaining fully compatible with the original project requirements.
 
-
-
 ## Compilation
 
 Compile the library:
@@ -107,8 +99,6 @@ make clean
 make fclean
 make re
 ```
-
-
 
 ## Usage
 
@@ -135,8 +125,6 @@ cc main.c libft.a -Iincludes -o main
 ./main
 ```
 
-
-
 ## Function Categories
 
 ### Character Functions
@@ -150,7 +138,6 @@ cc main.c libft.a -Iincludes -o main
 | `ft_isprint` | Checks printable character  |
 
 
-
 ### Memory Functions
 
 | Function     | Description              |
@@ -162,7 +149,6 @@ cc main.c libft.a -Iincludes -o main
 | `ft_memchr`  | Search memory            |
 | `ft_memcmp`  | Compare memory           |
 | `ft_calloc`  | Allocate and zero memory |
-
 
 
 ### String Functions
@@ -181,14 +167,12 @@ cc main.c libft.a -Iincludes -o main
 | `ft_split`   | Split string        |
 
 
-
 ### Conversion Functions
 
 | Function  | Description               |
 | --------- | ------------------------- |
 | `ft_atoi` | Convert string to integer |
 | `ft_itoa` | Convert integer to string |
-
 
 
 ### Output Functions
@@ -199,7 +183,6 @@ cc main.c libft.a -Iincludes -o main
 | `ft_putstr_fd`  | Output string           |
 | `ft_putendl_fd` | Output string + newline |
 | `ft_putnbr_fd`  | Output number           |
-
 
 
 ### Linked List Functions
@@ -254,8 +237,6 @@ Example:
 if (!ptr)
 	return (NULL);
 ```
-
-
 
 ## Testing
 
@@ -347,8 +328,6 @@ vgcore.*
 .DS_Store
 ```
 
-
-
 ## Allowed Functions
 
 The project complies with 42 project constraints and uses only:
@@ -357,27 +336,20 @@ The project complies with 42 project constraints and uses only:
 * `free`
 * `write`
 
-
-
 ## Resources
 
 ### Documentation
 
-* Linux man pages
-  [https://man7.org/linux/man-pages/](https://man7.org/linux/man-pages/)
+* [Linux man pages](https://man7.org/linux/man-pages/)
 
-* GNU Make documentation
-  [https://www.gnu.org/software/make/manual/](https://www.gnu.org/software/make/manual/)
+* [GNU Make documentation](https://www.gnu.org/software/make/manual/)
 
-* C language and libc references
-  [https://en.cppreference.com/w/c](https://en.cppreference.com/w/c)
+* [C language and libc references](https://en.cppreference.com/w/c)
 
 ### References
 
 * 42 project subject
 * C standard library documentation
-
-
 
 ## AI Usage
 
@@ -391,12 +363,11 @@ AI tools were used for:
 
 All implementation, integration, testing, and validation were completed manually.
 
-
-
 ## Notes
 
 Additional testing details and helper documentation are available in
 `tests/README.md`.
 
-This repository was developed as part of the 42 curriculum and is
-maintained for educational and portfolio purposes.
+Developed as part of the 42 curriculum.
+
+This repository is intended for educational, portfolio, and reference purposes.
