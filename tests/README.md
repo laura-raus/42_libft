@@ -181,4 +181,3 @@ subject and 42 Norm requirements.
 The `tests/` folder is extra local tooling.
 It is useful for GitHub and personal validation, but it should not be
 considered part of the official submitted library.
-
