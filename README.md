@@ -11,7 +11,6 @@ such as:
 - get_next_line
 - ft_printf
 - push_swap
-- minishell
 
 The library is compiled as a static archive:
 
@@ -74,7 +73,7 @@ libft/
 │   ├── main_libc.c
 │   ├── main_additional.c
 │   ├── main_lists.c
-|   ├── test_utils.h
+│   ├── test_utils.h
 │   └── valgrind.sh
 └── docs/
     └── en.subject.pdf
