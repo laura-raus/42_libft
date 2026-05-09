@@ -1,36 +1,97 @@
 *This project has been created as part of the 42 curriculum by laraus.*
 
-# Libft
+# libft
 
-C library of foundational functions including strings, memory, and linked list operations. Completed at 42 School.
+`libft` is a custom C library reimplementing foundational standard
+library functions alongside additional utility and linked list
+operations.
 
-
-# Description
-
-libft is one of the foundational projects at 42.
-
-The goal of the project is to recreate commonly used libc functions while learning:
-- memory management
-- pointer manipulation
-- string handling
-- linked lists
-- Makefiles
-- debugging
-- defensive programming
-
-The project also introduces low-level programming concepts such as:
-- heap vs stack memory
-- undefined behavior
-- manual memory allocation
-- buffer manipulation
-- data structures
-
-The final result is a reusable static C library (`libft.a`) used in future 42 projects such as:
+The project serves as the foundational library for future 42 projects
+such as:
 - get_next_line
+- ft_printf
 - push_swap
+- minishell
+
+The library is compiled as a static archive:
+
+```txt
+libft.a
+```
 
 
-# Instructions
+
+## Overview
+
+The project focuses on:
+
+* low-level memory manipulation
+* string handling
+* defensive programming
+* manual memory management
+* linked list operations
+* modular C project architecture
+* Makefile-based compilation
+
+The repository follows the original 42 project requirements while also
+introducing additional repository organization for:
+
+* maintainability
+* readability
+* testing
+* long-term portfolio usage
+
+
+
+## Internal Flow
+
+```txt
+Application
+    ↓
+libft.a
+    ↓
+utility functions
+    ↓
+memory / strings / lists
+```
+
+
+
+## Repository Structure
+
+```txt
+libft/
+├── Makefile
+├── README.md
+├── .gitignore
+├── includes/
+│   └── libft.h
+├── srcs/
+│   ├── libc/
+│   ├── additional/
+│   └── lists/
+├── tests/
+│   ├── main_libc.c
+│   ├── main_additional.c
+│   ├── main_lists.c
+│   └── valgrind.sh
+└── docs/
+    ├── en.subject.pdf
+    └── testing_notes.md
+```
+
+### Source Organization
+
+The repository separates functions into:
+
+* `libc/` → libc-style reimplementations
+* `additional/` → additional utility functions
+* `lists/` → linked list operations
+
+This structure improves readability and long-term maintainability while
+remaining fully compatible with the original project requirements.
+
+
 
 ## Compilation
 
@@ -40,283 +101,303 @@ Compile the library:
 make
 ```
 
-
-Remove object files:
+Additional rules:
 
 ```bash
 make clean
-```
-
-Remove object files and library:
-
-```bash
 make fclean
-```
-
-Recompile everything:
-
-```bash
 make re
 ```
 
 
-## Example Usage
 
-Compile with a test file:
+## Usage
 
-```bash
-cc main.c libft.a -o main
+Example:
+
+```c
+#include "libft.h"
+
+int	main(void)
+{
+	char	*str;
+
+	str = ft_strdup("Hello libft!");
+	ft_putendl_fd(str, 1);
+	free(str);
+	return (0);
+}
 ```
 
-Run:
+Compilation:
 
 ```bash
+cc main.c libft.a -Iincludes -o main
 ./main
 ```
 
 
-# Project Structure
 
-```text
-libft/
-├── Makefile
-├── libft.h
-├── ft_*.c
-├── ft_*.o
-```
+## Function Categories
+
+### Character Functions
+
+| Function     | Description                 |
+| ------------ | --------------------------- |
+| `ft_isalpha` | Checks alphabetic character |
+| `ft_isdigit` | Checks digit                |
+| `ft_isalnum` | Checks alphanumeric         |
+| `ft_isascii` | Checks ASCII                |
+| `ft_isprint` | Checks printable character  |
 
 
-# Concepts Learned
 
-## Memory Management
+### Memory Functions
 
-Understanding:
-- malloc
-- calloc
-- free
-- memory leaks
-- heap vs stack
-- ownership of allocated memory
+| Function     | Description              |
+| ------------ | ------------------------ |
+| `ft_memset`  | Fill memory              |
+| `ft_bzero`   | Zero memory              |
+| `ft_memcpy`  | Copy memory              |
+| `ft_memmove` | Safe memory copy         |
+| `ft_memchr`  | Search memory            |
+| `ft_memcmp`  | Compare memory           |
+| `ft_calloc`  | Allocate and zero memory |
 
-Example:
+
+
+### String Functions
+
+| Function     | Description         |
+| ------------ | ------------------- |
+| `ft_strlen`  | String length       |
+| `ft_strdup`  | Duplicate string    |
+| `ft_strchr`  | Find character      |
+| `ft_strrchr` | Find last character |
+| `ft_strncmp` | Compare strings     |
+| `ft_strnstr` | Search substring    |
+| `ft_substr`  | Extract substring   |
+| `ft_strjoin` | Join strings        |
+| `ft_strtrim` | Trim characters     |
+| `ft_split`   | Split string        |
+
+
+
+### Conversion Functions
+
+| Function  | Description               |
+| --------- | ------------------------- |
+| `ft_atoi` | Convert string to integer |
+| `ft_itoa` | Convert integer to string |
+
+
+
+### Output Functions
+
+| Function        | Description             |
+| --------------- | ----------------------- |
+| `ft_putchar_fd` | Output character        |
+| `ft_putstr_fd`  | Output string           |
+| `ft_putendl_fd` | Output string + newline |
+| `ft_putnbr_fd`  | Output number           |
+
+
+
+### Linked List Functions
+
+The linked list implementation uses:
 
 ```c
-char *s = ft_strdup("hello");
-free(s);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 ```
 
+Supported operations include:
 
-## Strings in C
+* node creation
+* insertion
+* deletion
+* iteration
+* mapping
+* memory cleanup
 
-C strings are arrays of characters terminated by `'\0'`.
+| Function          | Description       |
+| ----------------- | ----------------- |
+| `ft_lstnew`       | Create node       |
+| `ft_lstadd_front` | Add node to front |
+| `ft_lstadd_back`  | Add node to back  |
+| `ft_lstsize`      | Count nodes       |
+| `ft_lstlast`      | Get last node     |
+| `ft_lstdelone`    | Delete node       |
+| `ft_lstclear`     | Clear list        |
+| `ft_lstiter`      | Iterate list      |
+| `ft_lstmap`       | Map list          |
 
-Example:
-
-```c
-char str[] = "hello";
-```
-
-
-## Pointers
-
-Using:
-- pointers
-- double pointers
-- void pointers
-- function pointers
-
-Example:
-
-```c
-void *ptr;
-```
 
 
 ## Defensive Programming
 
-Handling:
-- NULL protection
-- allocation failures
-- edge cases
-- integer overflow
+The implementation includes handling for:
+
+* `NULL` pointers
+* allocation failures
+* memory safety concerns
+* overlapping memory regions
+* edge case inputs
+* integer overflow-sensitive behavior
 
 Example:
 
 ```c
 if (!ptr)
-    return (NULL);
+	return (NULL);
 ```
 
 
-## Linked Lists
 
-The project introduces singly linked lists using the structure:
-
-```c
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-} t_list;
-```
-
-Learned operations:
-- node creation
-- insertion
-- deletion
-- iteration
-- mapping
-- memory cleanup
-
-
-# Library Functions
-
-## Character Functions
-
-| Function | Description |
-|---|---|
-| ft_isalpha | Checks alphabetic character |
-| ft_isdigit | Checks digit |
-| ft_isalnum | Checks alphanumeric |
-| ft_isascii | Checks ASCII |
-| ft_isprint | Checks printable character |
-
-
-## Memory Functions
-
-| Function | Description |
-|---|---|
-| ft_memset | Fill memory |
-| ft_bzero | Zero memory |
-| ft_memcpy | Copy memory |
-| ft_memmove | Safe memory copy |
-| ft_memchr | Search memory |
-| ft_memcmp | Compare memory |
-| ft_calloc | Allocate and zero memory |
-
-
-## String Functions
-
-| Function | Description |
-|---|---|
-| ft_strlen | String length |
-| ft_strdup | Duplicate string |
-| ft_strchr | Find character |
-| ft_strrchr | Find last character |
-| ft_strncmp | Compare strings |
-| ft_strnstr | Search substring |
-| ft_substr | Extract substring |
-| ft_strjoin | Join strings |
-| ft_strtrim | Trim characters |
-| ft_split | Split string |
-
-
-## Conversion Functions
-
-| Function | Description |
-|---|---|
-| ft_atoi | Convert string to integer |
-| ft_itoa | Convert integer to string |
-
-
-## Output Functions
-
-| Function | Description |
-|---|---|
-| ft_putchar_fd | Output character |
-| ft_putstr_fd | Output string |
-| ft_putendl_fd | Output string + newline |
-| ft_putnbr_fd | Output number |
-
-
-## Linked List Functions
-
-| Function | Description |
-|---|---|
-| ft_lstnew | Create node |
-| ft_lstadd_front | Add node to front |
-| ft_lstadd_back | Add node to back |
-| ft_lstsize | Count nodes |
-| ft_lstlast | Get last node |
-| ft_lstdelone | Delete node |
-| ft_lstclear | Clear list |
-| ft_lstiter | Iterate list |
-| ft_lstmap | Map list |
-
-
-# 🛠️ Testing & Debugging
+## Testing
 
 The project was tested using:
-- custom test files
-- edge case testing
-- valgrind
-- gdb
-- comparison with original libc behavior
 
-Example:
+* custom test programs
+* edge case validation
+* Valgrind memory checks
+* gdb debugging
+* comparison against standard libc behavior
+
+The repository includes additional Makefile testing targets
+for easier local validation and debugging.
+
+### Build the library
 
 ```bash
-valgrind --leak-check=full ./main
+make
 ```
 
+### Run tests
 
-# Important Technical Notes
+#### Libc functions
 
-## Undefined Behavior
+```bash
+make test_libc
+```
+
+#### Additional functions
+
+```bash
+make test_additional
+```
+
+#### Linked list functions
+
+```bash
+make test_lists
+```
+
+### Run Valgrind checks
+
+#### Libc functions
+
+```bash
+make valgrind_libc
+```
+
+#### Additional functions
+
+```bash
+make valgrind_additional
+```
+
+#### Linked list functions
+
+```bash
+make valgrind_lists
+```
+
+The `tests/` directory contains:
+
+* function validation mains
+* edge case testing
+* memory leak verification scripts
+
+
+## Repository Files
+
+### `.gitignore`
+
+The repository includes a `.gitignore` file to avoid committing:
+
+* object files (`*.o`)
+* archives (`*.a`)
+* test executables
+* Valgrind logs
+* editor configuration files
+* system-specific files
 
 Example:
 
-```c
-char *s = "hello";
-s[0] = 'H';
+```gitignore
+*.o
+*.a
+main
+vgcore.*
+.vscode/
+.DS_Store
 ```
 
-Modifying string literals causes undefined behavior.
 
 
-## Memory Safety
+## Allowed Functions
 
-All heap allocations must be properly freed to avoid memory leaks.
+The project complies with 42 project constraints and uses only:
 
-
-## memcpy vs memmove
-
-`memcpy` is unsafe for overlapping memory regions.
-
-`memmove` safely handles overlap.
+* `malloc`
+* `free`
+* `write`
 
 
-# Resources
 
-## Documentation
+## Resources
 
-- Linux man pages:
-  - https://man7.org/linux/man-pages/
-- W3Schools - C Tutorial:
-  - https://www.w3schools.com/c/index.php
-- GNU Make documentation:
-  - https://www.gnu.org/software/make/manual/
+### Documentation
 
+* Linux man pages
+  [https://man7.org/linux/man-pages/](https://man7.org/linux/man-pages/)
 
-## Tutorials & References
+* GNU Make documentation
+  [https://www.gnu.org/software/make/manual/](https://www.gnu.org/software/make/manual/)
 
-- GeeksForGeeks C articles
-- 42 intra subject PDF
+* C language and libc references
+  [https://en.cppreference.com/w/c](https://en.cppreference.com/w/c)
 
+### References
 
-# AI Usage
-
-AI tools were used as learning assistants during the project.
-
-Usage included:
-- conceptual explanations
-- debugging guidance
-- clarification of memory behavior
-- understanding edge cases
-- README structure assistance
-
-All code was reviewed, tested, and adapted manually.
+* 42 project subject
+* C standard library documentation
 
 
-⚠️ This project was completed as part of 42 School.  
-It is provided for portfolio/review/learning purposes only. Please do not copy for coursework.
+
+## AI Usage
+
+AI tools were used for:
+
+* conceptual clarification
+* debugging assistance
+* memory management analysis
+* edge case review
+* documentation refinement
+
+All implementation, integration, testing, and validation were completed manually.
+
+
+
+## Notes
+
+Additional testing details and helper documentation are available in
+`tests/README.md`.
+
+This repository was developed as part of the 42 curriculum and is
+maintained for educational and portfolio purposes.
