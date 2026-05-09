@@ -6,7 +6,9 @@
 
 # Executables
 main
-test_*
+test_libc
+test_additional
+test_lists
 
 # Valgrind
 vgcore.*
