@@ -303,47 +303,12 @@ The `tests/` directory contains:
 * edge case testing
 * memory leak verification scripts
 
-
-## Repository Files
-
-### `.gitignore`
-
-The repository includes a `.gitignore` file to avoid committing:
-
-* object files (`*.o`)
-* archives (`*.a`)
-* test executables
-* Valgrind logs
-* editor configuration files
-* system-specific files
-
-Example:
-
-```gitignore
-*.o
-*.a
-main
-vgcore.*
-.vscode/
-.DS_Store
-```
-
-## Allowed Functions
-
-The project complies with 42 project constraints and uses only:
-
-* `malloc`
-* `free`
-* `write`
-
 ## Resources
 
 ### Documentation
 
 * [Linux man pages](https://man7.org/linux/man-pages/)
-
 * [GNU Make documentation](https://www.gnu.org/software/make/manual/)
-
 * [C language and libc references](https://en.cppreference.com/w/c)
 
 ### References
